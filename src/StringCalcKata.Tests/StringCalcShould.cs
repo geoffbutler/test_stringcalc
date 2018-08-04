@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using FluentAssertions;
+using StringCalcKata.Parser;
 
 namespace StringCalcKata.Tests
 {
@@ -12,7 +13,12 @@ namespace StringCalcKata.Tests
         [TestInitialize]
         public void Init()
         {
-            _target = new StringCalc();
+            var inputParser = new InputParser();
+            var numParser = new NumberParser();
+            var numFilterer = new NumberFilterer();
+            var numValidator = new NumberValidator();
+            var parser = new Parser.Parser(inputParser, numParser, numFilterer, numValidator);
+            _target = new StringCalc(parser);
         }
 
         [TestMethod]

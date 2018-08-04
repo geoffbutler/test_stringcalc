@@ -43,6 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IInputParser.cs" />
+    <Compile Include="Interfaces\INumberFilterer.cs" />
+    <Compile Include="Interfaces\INumberParser.cs" />
+    <Compile Include="Interfaces\INumberValidator.cs" />
+    <Compile Include="Interfaces\IParser.cs" />
+    <Compile Include="Models\InputInfo.cs" />
+    <Compile Include="Parser\InputParser.cs" />
+    <Compile Include="Parser\NumberFilterer.cs" />
+    <Compile Include="Parser\NumberParser.cs" />
+    <Compile Include="Parser\NumberValidator.cs" />
+    <Compile Include="Parser\Parser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringCalc.cs" />
@@ -50,6 +61,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
